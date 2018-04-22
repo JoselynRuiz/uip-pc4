@@ -9,32 +9,42 @@ tabla1 = [
 		"""
 			CREATE TABLE IF NOT EXISTS Persona(
 				ID INTEGER PRIMARY KEY,
-				ID_Persona INTEGER NOT NULL,
 				NOMBRE TEXT NOT NULL,
 				P_APELLIDO TEXT NOT NULL,
 				S_APELLIDO TEXT NOT NULL,
 				LUGAR TEXT NOT NULL,
-				FOREIGN KEY (ID_Persona)
-                REFERENCES Familia(ID_Persona)
-			)ENGINE=InnoDB;
+			
+			)
 		"""
     ]
-# for tabla11 in tabla1:
-# 	cursor.execute(tabla11);
+
 print("Tablas creadas correctamente")
 
-tabla4 = [
+tabla2 = [
 		"""
 			CREATE TABLE IF NOT EXISTS Familia(
 				ID_Padre INTEGER PRIMARY KEY,
-				ID_Madre INTEGER PRIMARY KEY,
-				ID_Hijo INTEGER PRIMARY KEY,
-				ID_Persona INTEGER PRIMARY KEY
-			)ENGINE=InnoDB;
+				ID_Madre TEXT NOT NULL,
+				ID_Hijo TEXT NOT NULL,
+				ID_Persona TEXT NOT NULL
+			)
 		"""
     ]
-# for tabla44 in tabla4:
-# 	cursor.execute(tabla44);
+
+print("Tablas creadas correctamente")
+
+tabla3 = [
+		"""
+			CREATE TABLE IF NOT EXISTS Relacion(
+				Fami TEXT NOT NULL,
+				Rela TEXT NOT NULL,
+				PRIMARY KEY(Fami,Rela),
+				FOREIGN KEY (Rela) REFERENCES Fami(ID),
+				FOREIGN KEY (Fami) REFERENCES Fami(ID_Padre)
+			)
+		"""
+    ]
+
 print("Tablas creadas correctamente")
 
 
