@@ -1,0 +1,39 @@
+.logo{
+    margin-top:5%;
+    font-size:10vh;
+    text-align: center;
+    display:inline-block;
+    word-spacing:-10px;
+    margin-left:5%;
+}
+
+.text-yellow{
+    color:orange;
+}
+
+.text-slate{
+    color:slateblue;
+}
+
+.text-tomato{
+    color:tomato;
+}
+
+#logo{
+    text-align:center !important
+}
+
+#btn_buscar{
+    margin-top:15px;
+  }
+
+  #tabla_de_contenido{
+
+    margin-top:20px;
+    min-height:25vh;
+    max-height:50vh;
+    overflow: auto;
+
+
+  }
+
